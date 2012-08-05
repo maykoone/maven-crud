@@ -15,7 +15,7 @@
     </head>
     <body>
         <h3>Cadastro de contato</h3>
-        <form:form action="/contato" method="post" commandName="contato">
+        <form:form action="contato" method="post" commandName="contato">
             <form:hidden path="id" />
             <table>
                 <tr>

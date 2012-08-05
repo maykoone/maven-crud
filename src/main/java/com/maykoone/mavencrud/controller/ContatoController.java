@@ -6,7 +6,6 @@ package com.maykoone.mavencrud.controller;
 
 import com.maykoone.mavencrud.entidade.Contato;
 import com.maykoone.mavencrud.service.ContatoService;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,9 +24,14 @@ public class ContatoController {
     @Autowired
     private ContatoService service;
 
+    public ContatoController() {
+//        service = (ContatoService) new ClassPathXmlApplicationContext(
+//                "classpath:META-INF/application-context.xml").getBean("contatoService");
+    }
+
     @RequestMapping(method = RequestMethod.GET)
-    public List<Contato> list() {
-        return service.list();
+    public ModelAndView list() {
+        return new ModelAndView("contato/list", "contatoList", service.list());
     }
 
     @RequestMapping(value = "/form", method = RequestMethod.GET)

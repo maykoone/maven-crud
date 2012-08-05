@@ -18,6 +18,6 @@
             <li>Nome: <c:out value="${contato.nome}"/></li>
             <li>Nome: <c:out value="${contato.email}"/></li>
         </ul>
-        <a href="/contato">Voltar</a>  
+        <a href="${pageContext.request.contextPath}/contato">Voltar</a>  
     </body>
 </html>

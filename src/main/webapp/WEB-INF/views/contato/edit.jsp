@@ -15,7 +15,7 @@
     </head>
     <body>
         <h3>Editar contato</h3>
-        <form:form action="/contato/${contato.id}" method="put" commandName="contato">
+        <form:form action="${pageContext.request.contextPath}/contato/${contato.id}" method="put" commandName="contato">
             <form:hidden path="id" />
             <table>
                 <tr>

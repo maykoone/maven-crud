@@ -28,11 +28,11 @@
                 <tr>
                     <td>${contato.id}</td>
                     <td>${contato.nome}</td>
-                    <td>${contato.ano}</td>
-                    <td><a href="/contato/${carro.id}/form">Editar</a></td>
-                    <td><a href="/contato/${carro.id}">Visualizar</a></td>
+                    <td>${contato.email}</td>
+                    <td><a href="contato/${contato.id}/form">Editar</a></td>
+                    <td><a href="contato/${contato.id}">Visualizar</a></td>
                     <td>
-                        <form:form action="/contato/${contato.id}" method="delete">
+                        <form:form action="contato/${contato.id}" method="delete">
                             <button>Excluir</button>
                         </form:form>
                     </td>
@@ -40,6 +40,6 @@
             </c:forEach>
         </table>
         <br>
-        <h5><a href="/contato/form">Novo</a></h5>
+        <h5><a href="contato/form">Novo</a></h5>
     </body>
 </html>
