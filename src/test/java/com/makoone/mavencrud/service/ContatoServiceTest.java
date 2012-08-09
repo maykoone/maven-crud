@@ -82,6 +82,25 @@ public class ContatoServiceTest {
     }
 
     @Test
+    public final void testFindByNome() {
+        Contato contato = new Contato();
+        contato.setNome("contato1");
+        contato.setEmail("email");
+
+        contato = service.save(contato);
+
+        Contato contatoFind = service.findByNome(contato.getNome());
+
+        assertNotNull(contatoFind);
+        try {
+
+            assertEquals(contatoFind, contato);
+        } catch (AssertionError e) {
+            fail("os contatos não são iguais");
+        }
+    }
+
+    @Test
     public final void testFindAll() {
         List<Contato> contatos = service.list();
 

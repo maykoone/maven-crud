@@ -15,15 +15,11 @@
     </head>
     <body>
         <h3>Editar contato</h3>
-        <form:form action="${pageContext.request.contextPath}/contato/${contato.id}" method="put" commandName="contato">
+        <form:form action="${pageContext.request.contextPath}/contato/edit" method="put" commandName="contato">
             <form:hidden path="id" />
-            <table>
-                <tr>
-                    <td>Nome: <form:input path="nome" /></td>
-                    <td>E-mail: <form:input path="email" /></td>
-                    <td><input type="submit"></td>
-                </tr>
-            </table>
+            <label>Nome:</label> <form:input path="nome" /><br />
+            <label>E-mail:</label> <form:input path="email" /><br />
+            <input type="submit">
         </form:form>
     </body>
 </html>

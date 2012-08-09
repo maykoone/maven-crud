@@ -45,9 +45,9 @@ public class ContatoController {
         return "redirect:/contato";
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ModelAndView show(@PathVariable Long id) {
-        Contato contato = service.findById(id);
+    @RequestMapping(value = "/{nome}", method = RequestMethod.GET)
+    public ModelAndView show(@PathVariable String nome) {
+        Contato contato = service.findByNome(nome);
         return new ModelAndView("contato/show", "contato", contato);
     }
 
@@ -57,7 +57,7 @@ public class ContatoController {
         return new ModelAndView("contato/edit", "contato", contato);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/edit", method = RequestMethod.PUT)
     public String update(Contato contato) {
         service.save(contato);
         return "redirect:/contato";

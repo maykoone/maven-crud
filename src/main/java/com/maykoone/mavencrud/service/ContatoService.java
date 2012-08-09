@@ -15,5 +15,7 @@ public interface ContatoService {
 
     public abstract Contato findById(Long id);
 
+    public abstract Contato findByNome(String nome);
+
     public abstract List<Contato> list();
 }

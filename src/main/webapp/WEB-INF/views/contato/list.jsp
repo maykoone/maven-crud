@@ -30,7 +30,7 @@
                     <td>${contato.nome}</td>
                     <td>${contato.email}</td>
                     <td><a href="contato/${contato.id}/form">Editar</a></td>
-                    <td><a href="contato/${contato.id}">Visualizar</a></td>
+                    <td><a href="contato/${contato.nome}">Visualizar</a></td>
                     <td>
                         <form:form action="contato/${contato.id}" method="delete">
                             <button>Excluir</button>
